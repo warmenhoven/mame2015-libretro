@@ -34,7 +34,10 @@ include:
     file: '/linux-aarch64.yml'
 
   #################################### MISC ##################################
-    
+  # webOS 32-bit (LGTV)
+  - project: 'libretro-infrastructure/ci-templates'
+    file: '/webos-make.yml'
+
 # Stages for building
 stages:
   - build-prepare
@@ -85,3 +88,10 @@ libretro-build-linux-aarch64-cdi2015:
   extends:
     - .libretro-linux-aarch64-make-default
     - .core-defs-cdi2015
+
+#################################### MISC ##################################
+# webOS 32-bit
+libretro-build-webos-armv7a:
+  extends:
+    - .libretro-webos-armv7a-make-default
+    - .core-defs
