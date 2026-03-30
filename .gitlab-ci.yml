@@ -29,6 +29,10 @@ include:
   - project: 'libretro-infrastructure/ci-templates'
     file: '/linux-i686.yml'
 
+  # Linux 64-bit (ARM)
+  - project: 'libretro-infrastructure/ci-templates'
+    file: '/linux-aarch64.yml'
+
   #################################### MISC ##################################
     
 # Stages for building
@@ -74,4 +78,10 @@ libretro-build-linux-x64-cdi2015:
 libretro-build-linux-i686-cdi2015:
   extends:
     - .libretro-linux-i686-make-default
+    - .core-defs-cdi2015
+
+# Linux 64-bit (ARM)
+libretro-build-linux-aarch64-cdi2015:
+  extends:
+    - .libretro-linux-aarch64-make-default
     - .core-defs-cdi2015
