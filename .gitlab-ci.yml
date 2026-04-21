@@ -94,4 +94,4 @@ libretro-build-linux-aarch64-cdi2015:
 libretro-build-webos-armv7a:
   extends:
     - .libretro-webos-armv7a-make-default
-    - .core-defs
+    - .core-defs-cdi2015
